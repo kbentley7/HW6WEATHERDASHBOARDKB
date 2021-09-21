@@ -58,13 +58,13 @@ $("#searchBtn").on("click", function() {
 
   function getCurrentConditions (response) {
 
-    // get the temperature and convert to fahrenheit 
+    // find temperature and change to fahrenheit 
     let tempF = (response.main.temp - 273.15) * 1.80 + 32;
     tempF = Math.floor(tempF);
 
     $('#currentCity').empty();
 
-    // get and set the content 
+    // create content cards
     const card = $("<div>").addClass("card");
     const cardBody = $("<div>").addClass("card-body");
     const city = $("<h4>").addClass("card-title").text(response.name);

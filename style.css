@@ -1,8 +1,9 @@
 .hide {
     display: none;
+    background-color: grey;
 }
 
 .show {
     display: block;
-
+    background-color: grey;
 }
