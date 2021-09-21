@@ -64,7 +64,7 @@ $("#searchBtn").on("click", function() {
 
     $('#currentCity').empty();
 
-    // create content cards
+    // content cards created here
     const card = $("<div>").addClass("card");
     const cardBody = $("<div>").addClass("card-body");
     const city = $("<h4>").addClass("card-title").text(response.name);
@@ -97,7 +97,7 @@ function getCurrentForecast () {
     let results = response.list;
     console.log(results)
     
-    //declare start date to check against
+    //determine start date to check against
     // startDate = 20
     //have end date, endDate = startDate + 5
 
@@ -110,7 +110,7 @@ function getCurrentForecast () {
 
       if(results[i].dt_txt.indexOf("12:00:00") !== -1){
         
-        // get the temperature and convert to fahrenheit 
+        // find and convert temperature to fahrenheit 
         let temp = (results[i].main.temp - 273.15) * 1.80 + 32;
         let tempF = Math.floor(temp);
 
